@@ -1,23 +1,22 @@
 <h1><%= @car.year.to_s + " " + @car.make + " " + @car.car_model %></h1>
 
-<div class="picture"><%= image_tag @car.picture.url %></div>
+<%= image_tag @car.picture.url %>
 <br>
-<div class="outer">
-	<div><strong>Price: </strong><%= @car.price %></div>
-	<div><strong>Year: </strong><%= @car.year %></div>
-	<div><strong>Make: </strong><%= @car.make %></div>
-	<div><strong>Model: </strong><%= @car.car_model %></div>
-	<div><strong>Mileage: </strong><%= @car.mileage %></div>
-	<div><strong>Exterior Color: </strong><%= @car.ext_color %></div>
-	<div><strong>Interior Color: </strong><%= @car.int_color %></div>
-	<div><strong>Engine: </strong><%= @car.engine %></div>
-	<div><strong>Transmission: </strong><%= @car.transmission %></div>
-	<div><strong>Drivetrain: </strong><%= @car.drivetrain %></div>
-	<div><strong>Fuel: </strong><%= @car.fuel %></div>
-	<div><strong>Doors: </strong><%= @car.door_count %></div>
-	<div><strong>Description: </strong><%= @car.description %></div>
-	<div><strong>Contact Email: </strong><%= @car.contact_email %></div>
-</div>
+<br>
+	<p><strong>Price: </strong><%= @car.price %></p>
+	<p><strong>Year: </strong><%= @car.year %></p>
+	<p><strong>Make: </strong><%= @car.make %></p>
+	<p><strong>Model: </strong><%= @car.car_model %></p>
+	<p><strong>Mileage: </strong><%= @car.mileage %></p>
+	<p><strong>Exterior Color: </strong><%= @car.ext_color %></p>
+	<p><strong>Interior Color: </strong><%= @car.int_color %></p>
+	<p><strong>Engine: </strong><%= @car.engine %></p>
+	<p><strong>Transmission: </strong><%= @car.transmission %></p>
+	<p><strong>Drivetrain: </strong><%= @car.drivetrain %></p>
+	<p><strong>Fuel: </strong><%= @car.fuel %></p>
+	<p><strong>Doors: </strong><%= @car.door_count %></p>
+	<p><strong>Description: </strong><%= @car.description %></p>
+	<p><strong>Contact Email: </strong><%= @car.contact_email %></p>
 <br>
 <% if (current_user && @car.contact_email == current_user.email) %>
 	<%= link_to 'EDIT', edit_car_path %>

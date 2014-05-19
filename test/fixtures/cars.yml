@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: 1
+  make: MyString
+  model_name: MyString
+  mileage: MyString
+  ext_color: MyString
+  int_color: MyString
+  engine: MyString
+  transmission: MyString
+  drivetrain: MyString
+  fuel: MyString
+  door_count: MyString
+  description: MyString
+  price: MyString
+  contact_email: MyString
+
+two:
+  year: 1
+  make: MyString
+  model_name: MyString
+  mileage: MyString
+  ext_color: MyString
+  int_color: MyString
+  engine: MyString
+  transmission: MyString
+  drivetrain: MyString
+  fuel: MyString
+  door_count: MyString
+  description: MyString
+  price: MyString
+  contact_email: MyString

@@ -31,7 +31,7 @@ class CarsController < ApplicationController
 
   def update
     @car = Car.find(params[:id])
-    if @car.update(car_params)
+    if @car.update_attributes(car_params)
       redirect_to cars_path
     else
       render 'edit'

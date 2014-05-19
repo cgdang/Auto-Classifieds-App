@@ -1,4 +1,4 @@
-<h1><%= @car.year + " " + @car.make + " " + @car.model_name %></h1>
+<h1><%= @car.year.to_s + " " + @car.make + " " + @car.car_model %></h1>
 
 <div><%= image_tag @car.picture.url %></div>
 <br>
@@ -6,7 +6,7 @@
 	<div><strong>Price: </strong><%= @car.price %></div>
 	<div><strong>Year: </strong><%= @car.year %></div>
 	<div><strong>Make: </strong><%= @car.make %></div>
-	<div><strong>Model: </strong><%= @car.model_name %></div>
+	<div><strong>Model: </strong><%= @car.car_model %></div>
 	<div><strong>Mileage: </strong><%= @car.mileage %></div>
 	<div><strong>Exterior Color: </strong><%= @car.ext_color %></div>
 	<div><strong>Interior Color: </strong><%= @car.int_color %></div>
@@ -19,7 +19,7 @@
 	<div><strong>Contact Email: </strong><%= @car.contact_email %></div>
 </div>
 <br>
-<% if (current_user && @car.email == current_user.email) %>
+<% if (current_user && @car.contact_email == current_user.email) %>
 	<%= link_to 'EDIT', edit_car_path %>
 	<%= link_to 'DELETE', car_path, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>

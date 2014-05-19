@@ -6,10 +6,10 @@ class Car
   has_mongoid_attached_file :picture
 
   validates_attachment_content_type :picture , :content_type => /\Aimage\/.*\Z/
-  
+
   field :year, type: Integer
   field :make, type: String
-  field :model_name, type: String
+  field :car_model, type: String
   field :mileage, type: String
   field :ext_color, type: String
   field :int_color, type: String

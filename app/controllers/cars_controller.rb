@@ -49,7 +49,7 @@ end
 private
 
 def car_params
-  params.require(:car).permit(:year, :make, :model_name, :mileage, :ext_color, :int_color, :engine, :transmission, :drivetrain, :fuel, :door_count, :description, :price, :contact_email, :picture)
+  params.require(:car).permit(:year, :make, :car_model, :mileage, :ext_color, :int_color, :engine, :transmission, :drivetrain, :fuel, :door_count, :description, :price, :contact_email, :picture)
 end
 
 def set_user

@@ -4,7 +4,7 @@
 
 <div class="outer">
 	<%= link_to car_path c do %>
-        <strong><%= c.year + " " + c.make + " " + c.model_name + " - " + c.price %></strong>
+        <strong><%= c.year.to_s + " " + c.make + " " + c.car_model + " - " + c.price %></strong>
     <% end %>
 
 </div>

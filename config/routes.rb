@@ -1,5 +1,7 @@
 Autoclassifieds::Application.routes.draw do
 
+  get "users/new"
+  get "users/create"
   resources :cars
   root 'cars#index'
 

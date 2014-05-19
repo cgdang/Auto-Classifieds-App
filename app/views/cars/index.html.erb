@@ -1,2 +1,17 @@
-<h1>Cars#index</h1>
-<p>Find me in app/views/cars/index.html.erb</p>
+<h1>CARS</h1>
+
+<% @cars.each do |c| %>
+
+<div class="outer">
+	<%= link_to car_path c do %>
+        <strong><%= c.year + " " + c.make + " " + c.model_name + " - " + c.price %></strong>
+    <% end %>
+
+</div>
+<br>
+<% end %>
+
+<br>
+<br>
+
+<%= link_to 'ADD NEW CAR LISTING', new_car_path %>

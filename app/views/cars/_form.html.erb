@@ -1,0 +1,21 @@
+<%= form_for @car, :html => { :multipart => true } do |f| %>
+<!-- <div class="field">Year <br><%= f.select(:year, 1900..2015) %></div> -->
+<div class="field"> <br><%= f.text_field :contact_email, value: current_user.email %></div>
+<div class="field">Price <br><%= f.text_field :price %></div>
+<div class="field">Year <br><%= f.text_field :year %></div>
+<div class="field">Make <br><%= f.text_field :make %></div>
+<div class="field">Model <br><%= f.text_field :model_name %></div>
+<div class="field">Mileage <br><%= f.text_field :mileage %></div>
+<div class="field">Exterior Color <br><%= f.text_field :ext_color %></div>
+<div class="field">Interior Color <br><%= f.text_field :int_color %></div>
+<div class="field">Engine <br><%= f.text_field :engine %></div>
+<div class="field">Transmission <br><%= f.select(:transmission, ['-', 'Automatic', 'Manual'], class: "form-control") %></div>
+<div class="field">Drivetrain <br><%= f.select(:drivetrain, ['-', 'Front Wheel Drive', 'Rear Wheel Drive', 'AWD/4WD'], class: "form-control") %></div>
+<div class="field">Fuel <br><%= f.select(:fuel, ['-', 'Gasoline', 'Diesel', 'Hybrid', 'Electric', 'Alternative'], class: "form-control") %></div>
+<div class="field">Doors <br><%= f.select(:door_count, ['-', 'Two Door', 'Three Door', 'Four Door', 'Five Door'], class: "form-control") %></div>
+<div class="field">Description <br><%= f.text_field :description %></div>
+<br>
+<div class="field">Upload Photo <br><%= f.file_field :picture %></div>
+<br>
+<div class="button"><%= f.submit %></div>
+<% end %>

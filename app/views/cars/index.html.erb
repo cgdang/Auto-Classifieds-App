@@ -2,16 +2,11 @@
 
 <% @cars.each do |c| %>
 
-<div class="outer">
+	<div>
 	<%= link_to car_path c do %>
-        <strong><%= c.year.to_s + " " + c.make + " " + c.car_model + " - " + c.price %></strong>
+        <h3><%= c.year.to_s + " " + c.make + " " + c.car_model + " - " + c.price %></h3>
     <% end %>
+	</div>
 
-</div>
-<br>
 <% end %>
 
-<br>
-<br>
-
-<%= link_to 'ADD NEW CAR LISTING', new_car_path %>

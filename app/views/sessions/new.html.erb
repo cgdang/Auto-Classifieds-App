@@ -1,7 +1,7 @@
 <h1>LOGIN</h1>
-
+<br>
 <%= form_for :session, :url => sessions_path do |f| %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  <%= f.submit "Login" %>
+  EMAIL: <%= f.text_field :email %>
+  PASSWORD: <%= f.password_field :password %>
+  <%= f.submit "LOGIN" %>
 <% end %>

@@ -1,2 +1,28 @@
-<h1>Cars#show</h1>
-<p>Find me in app/views/cars/show.html.erb</p>
+<h1><%= @car.year + " " + @car.make + " " + @car.model_name %></h1>
+
+<div><%= image_tag @car.picture.url %></div>
+<br>
+<div class="outer">
+	<div><strong>Price: </strong><%= @car.price %></div>
+	<div><strong>Year: </strong><%= @car.year %></div>
+	<div><strong>Make: </strong><%= @car.make %></div>
+	<div><strong>Model: </strong><%= @car.model_name %></div>
+	<div><strong>Mileage: </strong><%= @car.mileage %></div>
+	<div><strong>Exterior Color: </strong><%= @car.ext_color %></div>
+	<div><strong>Interior Color: </strong><%= @car.int_color %></div>
+	<div><strong>Engine: </strong><%= @car.engine %></div>
+	<div><strong>Transmission: </strong><%= @car.transmission %></div>
+	<div><strong>Drivetrain: </strong><%= @car.drivetrain %></div>
+	<div><strong>Fuel: </strong><%= @car.fuel %></div>
+	<div><strong>Doors: </strong><%= @car.door_count %></div>
+	<div><strong>Description: </strong><%= @car.description %></div>
+	<div><strong>Contact Email: </strong><%= @car.contact_email %></div>
+</div>
+<br>
+<% if (current_user && @car.email == current_user.email) %>
+	<%= link_to 'EDIT', edit_car_path %>
+	<%= link_to 'DELETE', car_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+<br>
+<br>
+<%= link_to 'BACK TO ALL CARS LISTINGS', cars_path %>

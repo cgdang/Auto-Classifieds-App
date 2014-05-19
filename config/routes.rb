@@ -1,9 +1,13 @@
 Autoclassifieds::Application.routes.draw do
-
+  
   resources :cars
   resources :users, only: [:new, :create]
+  resource :sessions, only: [:new, :create, :destroy]
   root 'cars#index'
 
+  # get "sessions/new"
+  # get "sessions/create"
+  # get "sessions/destroy"
   # get "users/new"
   # get "users/create"
   # get "cars/index"
